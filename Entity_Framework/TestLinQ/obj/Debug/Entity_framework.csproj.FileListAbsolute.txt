@@ -1,0 +1,15 @@
+D:\Git\Windows-form\Entity_Framework\TestLinQ\obj\Debug\Entity_framework.csprojAssemblyReference.cache
+D:\Git\Windows-form\Entity_Framework\TestLinQ\obj\Debug\TestLinQ.Form1.resources
+D:\Git\Windows-form\Entity_Framework\TestLinQ\obj\Debug\TestLinQ.Properties.Resources.resources
+D:\Git\Windows-form\Entity_Framework\TestLinQ\obj\Debug\Entity_framework.csproj.GenerateResource.cache
+D:\Git\Windows-form\Entity_Framework\TestLinQ\obj\Debug\Entity_framework.csproj.CoreCompileInputs.cache
+D:\Git\Windows-form\Entity_Framework\TestLinQ\obj\Debug\TestLinQ.exe
+D:\Git\Windows-form\Entity_Framework\TestLinQ\obj\Debug\TestLinQ.pdb
+D:\Git\Windows-form\Entity_Framework\TestLinQ\bin\Debug\TestLinQ.exe.config
+D:\Git\Windows-form\Entity_Framework\TestLinQ\bin\Debug\TestLinQ.exe
+D:\Git\Windows-form\Entity_Framework\TestLinQ\bin\Debug\TestLinQ.pdb
+D:\Git\Windows-form\Entity_Framework\TestLinQ\bin\Debug\EntityFramework.dll
+D:\Git\Windows-form\Entity_Framework\TestLinQ\bin\Debug\EntityFramework.SqlServer.dll
+D:\Git\Windows-form\Entity_Framework\TestLinQ\bin\Debug\EntityFramework.xml
+D:\Git\Windows-form\Entity_Framework\TestLinQ\bin\Debug\EntityFramework.SqlServer.xml
+D:\Git\Windows-form\Entity_Framework\TestLinQ\obj\Debug\Entity_framework.csproj.CopyComplete

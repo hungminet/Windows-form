@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyBanHangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChiTietHoaDon">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaHD" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaSP" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Soluong" Type="float" />
+  </EntityType>
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="MaHD" />
+    </Key>
+    <Property Name="MaHD" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaKH" Type="nchar" MaxLength="10" />
+    <Property Name="MaNV" Type="nchar" MaxLength="10" />
+    <Property Name="NgayLapHD" Type="date" />
+    <Property Name="NgayNhanHang" Type="date" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenCty" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThanhPho" Type="nchar" MaxLength="10" />
+    <Property Name="DienThoai" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ho" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nu" Type="bit" />
+    <Property Name="NgayNV" Type="date" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="DienThoai" Type="nchar" MaxLength="20" />
+    <Property Name="Hinh" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'QuanLyBanHang.dbo.SanPham' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SanPham">
+          <Property Name="MaSP" Type="nchar" MaxLength="10" />
+          <Property Name="TenSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="DonViTinh" Type="nvarchar" MaxLength="50" />
+          <Property Name="DonGia" Type="float" />
+          <Property Name="Hinh" Type="nchar" MaxLength="20" />
+        </EntityType>-->
+  <EntityType Name="ThanhPho">
+    <Key>
+      <PropertyRef Name="ThanhPho" />
+    </Key>
+    <Property Name="ThanhPho" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenThanhPho" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="QuanLyBanHangModelStoreContainer">
+    <EntitySet Name="ChiTietHoaDon" EntityType="Self.ChiTietHoaDon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThanhPho" EntityType="Self.ThanhPho" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -28,8 +28,8 @@ namespace TestLinQ
         {
             txt_cityID.ResetText();
             txt_cityName.ResetText();
-            QLBHDataContext qLBHDataContext = new QLBHDataContext();
-            dataGridView1.DataSource = qLBHDataContext.ThanhPhos;
+            workBaseCity = new WorkBaseCity();
+            dataGridView1.DataSource = workBaseCity.GetCities();
             this.btn_add.Enabled = true;
             this.btn_del.Enabled = true;
             this.btn_edit.Enabled = true;
