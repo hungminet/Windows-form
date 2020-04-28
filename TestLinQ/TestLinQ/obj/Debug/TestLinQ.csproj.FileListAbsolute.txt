@@ -1,0 +1,10 @@
+C:\Users\DELL\source\repos\TestLinQ\TestLinQ\obj\Debug\TestLinQ.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\TestLinQ\TestLinQ\obj\Debug\TestLinQ.Form1.resources
+C:\Users\DELL\source\repos\TestLinQ\TestLinQ\obj\Debug\TestLinQ.Properties.Resources.resources
+C:\Users\DELL\source\repos\TestLinQ\TestLinQ\obj\Debug\TestLinQ.csproj.GenerateResource.cache
+C:\Users\DELL\source\repos\TestLinQ\TestLinQ\obj\Debug\TestLinQ.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\TestLinQ\TestLinQ\bin\Debug\TestLinQ.exe.config
+C:\Users\DELL\source\repos\TestLinQ\TestLinQ\bin\Debug\TestLinQ.exe
+C:\Users\DELL\source\repos\TestLinQ\TestLinQ\bin\Debug\TestLinQ.pdb
+C:\Users\DELL\source\repos\TestLinQ\TestLinQ\obj\Debug\TestLinQ.exe
+C:\Users\DELL\source\repos\TestLinQ\TestLinQ\obj\Debug\TestLinQ.pdb
