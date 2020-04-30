@@ -5,7 +5,9 @@ CREATE table Product(
 	Product_ID char(5) primary key,
 	Product_Price int,
 	Product_Name char(10),
-	Product_State bit
+	Product_State bit,
+	Product_Cost_good_sold int,
+	Product_Profit int
 )
 
 
@@ -32,8 +34,12 @@ Create table Employee(
 	Employee_ID char (5) primary key,
 	Employee_Salary int,
 	Employee_Name char (30),
-	Employee_Birthday date
+	Employee_Birthday date,
+	Employee_ManagerID char(5),
+	Employee_State bit
 )
+Alter table Employee WITH CHECK ADD FOREIGN KEY(Employee_ManagerID) REFERENCES Employee(Employee_ID)
+
 
 Create table Bill(
 	Bill_ID char(5),
@@ -46,6 +52,7 @@ Create table Bill(
 Create table Bill_detail(
 	Bill_ID char(5) references Bill(Bill_ID),
 	Product_ID char (5) references Product(Product_ID),
-	Among int
+	Among int,
+	Primary key (Bill_ID, Product_ID)
 )
 
