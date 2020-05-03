@@ -1,0 +1,12 @@
+S:\Game\GameGK\GameGK\bin\Debug\GameGK.exe.config
+S:\Game\GameGK\GameGK\bin\Debug\GameGK.exe
+S:\Game\GameGK\GameGK\bin\Debug\GameGK.pdb
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.csprojAssemblyReference.cache
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.Properties.Resources.resources
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.csproj.GenerateResource.cache
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.exe
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.pdb
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.MainWindow.resources
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.Login.resources
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.Menu.resources
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.Score.resources
