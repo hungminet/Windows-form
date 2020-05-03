@@ -26,11 +26,6 @@ namespace GameGK
             
         }
 
-        private void btnRG_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         
         
         private void lbExit_Click(object sender, EventArgs e)
@@ -139,6 +134,35 @@ namespace GameGK
         private void lbLogin_Click(object sender, EventArgs e)
         {
             pnSignUp.Visible = false;
+        }
+
+        private void btnRG_Click_1(object sender, EventArgs e)
+        {
+            bool success = true;
+            PlayerEntities playerEntity = new PlayerEntities();
+            Player player1 = new Player();
+            var pl =
+                from p in playerEntity.Players
+                select p;
+            //Kiem tra username trong database
+            foreach (var p in pl)
+            {
+                if (this.txtUsername.Text.Trim() == p.P_Username)
+                {
+                    success = false;
+                    MessageBox.Show("Username have been taken!");
+                }
+            }
+            if(success)
+            {
+                player1.P_Username = this.txtUsername.Text.Trim();
+                player1.P_Password = this.txtPassword.Text.Trim();
+                player1.P_Score = 0;
+                playerEntity.Players.Add(player1);
+                playerEntity.SaveChanges();
+                MessageBox.Show("Register successfully!");
+            }
+
         }
     }
 }

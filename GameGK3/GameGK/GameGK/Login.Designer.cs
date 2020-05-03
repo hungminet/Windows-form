@@ -134,6 +134,7 @@
             this.btnRG.TabIndex = 17;
             this.btnRG.Text = "REGISTER";
             this.btnRG.UseVisualStyleBackColor = false;
+            this.btnRG.Click += new System.EventHandler(this.btnRG_Click_1);
             // 
             // txtPW
             // 

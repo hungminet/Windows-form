@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="PlayerEntities">
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="masterModel.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="P_Username" ColumnName="P_Username" />
+          <ScalarProperty Name="P_Password" ColumnName="P_Password" />
+          <ScalarProperty Name="P_Score" ColumnName="P_Score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
