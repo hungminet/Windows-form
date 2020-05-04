@@ -26,5 +26,12 @@ namespace GameGK
         }
     
         public virtual DbSet<Player> Players { get; set; }
+        public virtual DbSet<CuonSach> CuonSaches { get; set; }
+        public virtual DbSet<DAUSACH> DAUSACHes { get; set; }
+        public virtual DbSet<DocGia> DocGias { get; set; }
+        public virtual DbSet<Muon> Muons { get; set; }
+        public virtual DbSet<NXB> NXBs { get; set; }
+        public virtual DbSet<spt_fallback_dev> spt_fallback_dev { get; set; }
+        public virtual DbSet<spt_monitor> spt_monitor { get; set; }
     }
 }

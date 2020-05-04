@@ -99,6 +99,7 @@
             this.pnSignUp.Size = new System.Drawing.Size(444, 504);
             this.pnSignUp.TabIndex = 25;
             this.pnSignUp.Visible = false;
+          //  this.pnSignUp.Paint += new System.Windows.Forms.PaintEventHandler(this.pnSignUp_Paint);
             // 
             // lbLogin
             // 

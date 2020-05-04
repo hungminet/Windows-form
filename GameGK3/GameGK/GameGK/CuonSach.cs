@@ -12,11 +12,13 @@ namespace GameGK
     using System;
     using System.Collections.Generic;
     
-    public partial class Player
+    public partial class CuonSach
     {
-        public string P_Username { get; set; }
-        public string P_Password { get; set; }
-        public Nullable<int> P_Score { get; set; }
-        public Nullable<bool> P_State { get; set; }
+        public string MaSach { get; set; }
+        public string MaCuon { get; set; }
+        public string ViTri { get; set; }
+    
+        public virtual DAUSACH DAUSACH { get; set; }
+        public virtual Muon Muon { get; set; }
     }
 }

@@ -80,7 +80,41 @@ namespace GameGK
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            bool flag_avai_user = false;
+            try
+            {
+                PlayerEntities playerEntity = new PlayerEntities();
+                Player player1 = new Player();
+                var pl =
+                    from p in playerEntity.Players
+                    select p;
+                //Kiem tra username trong database
+                foreach (var p in pl)
+                {
+                    if (this.txtUsername.Text.Trim() == p.P_Username.Trim())
+                    {
+                        if(this.txtPassword.Text.Trim() == p.P_Password.Trim())
+                        {
+                            p.P_State = true;
+                            MessageBox.Show("đăng nhập rồi nè");
+                            // đăng nhập rồi nè
+                        }    
+                        else
+                        {
+                            MessageBox.Show("Wrong Password!");
+                        }
+                        flag_avai_user = true;
+                        break;
+                    }
+                }
+                if(!flag_avai_user)
+                    MessageBox.Show("Username is not defined");
 
+            }
+            catch
+            {
+
+            }
         }
 
         private void txtUS_Click(object sender, EventArgs e)
@@ -147,7 +181,7 @@ namespace GameGK
             //Kiem tra username trong database
             foreach (var p in pl)
             {
-                if (this.txtUsername.Text.Trim() == p.P_Username)
+                if (this.txtUS.Text.Trim() == p.P_Username.Trim())
                 {
                     success = false;
                     MessageBox.Show("Username have been taken!");
@@ -155,14 +189,18 @@ namespace GameGK
             }
             if(success)
             {
-                player1.P_Username = this.txtUsername.Text.Trim();
-                player1.P_Password = this.txtPassword.Text.Trim();
+                player1.P_Username = this.txtUS.Text.Trim();
+                player1.P_Password = this.txtPW.Text.Trim();
                 player1.P_Score = 0;
+                player1.P_State = false;
                 playerEntity.Players.Add(player1);
                 playerEntity.SaveChanges();
                 MessageBox.Show("Register successfully!");
+                this.txtUS.ResetText();
+                this.txtPW.ResetText();
             }
 
         }
+
     }
 }

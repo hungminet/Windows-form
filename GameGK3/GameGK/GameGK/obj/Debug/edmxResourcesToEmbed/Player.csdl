@@ -7,8 +7,179 @@
     <Property Name="P_Username" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="P_Password" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
     <Property Name="P_Score" Type="Int32" />
+    <Property Name="P_State" Type="Boolean" />
   </EntityType>
   <EntityContainer Name="PlayerEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Players" EntityType="Self.Player" />
+    <EntitySet Name="CuonSaches" EntityType="masterModel.CuonSach" />
+    <EntitySet Name="DAUSACHes" EntityType="masterModel.DAUSACH" />
+    <EntitySet Name="DocGias" EntityType="masterModel.DocGia" />
+    <EntitySet Name="Muons" EntityType="masterModel.Muon" />
+    <EntitySet Name="NXBs" EntityType="masterModel.NXB" />
+    <EntitySet Name="spt_fallback_dev" EntityType="masterModel.spt_fallback_dev" />
+    <EntitySet Name="spt_monitor" EntityType="masterModel.spt_monitor" />
+    <AssociationSet Name="FK__CuonSach__MaSach__0BE6BFCF" Association="masterModel.FK__CuonSach__MaSach__0BE6BFCF">
+      <End Role="DAUSACH" EntitySet="DAUSACHes" />
+      <End Role="CuonSach" EntitySet="CuonSaches" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Muon__MaCuon__10AB74EC" Association="masterModel.FK__Muon__MaCuon__10AB74EC">
+      <End Role="CuonSach" EntitySet="CuonSaches" />
+      <End Role="Muon" EntitySet="Muons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DAUSACH__MaNXB__147C05D0" Association="masterModel.FK__DAUSACH__MaNXB__147C05D0">
+      <End Role="NXB" EntitySet="NXBs" />
+      <End Role="DAUSACH" EntitySet="DAUSACHes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Muon__MaDG__119F9925" Association="masterModel.FK__Muon__MaDG__119F9925">
+      <End Role="DocGia" EntitySet="DocGias" />
+      <End Role="Muon" EntitySet="Muons" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="CuonSach">
+    <Key>
+      <PropertyRef Name="MaCuon" />
+    </Key>
+    <Property Name="MaSach" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MaCuon" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ViTri" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="DAUSACH" Relationship="masterModel.FK__CuonSach__MaSach__0BE6BFCF" FromRole="CuonSach" ToRole="DAUSACH" />
+    <NavigationProperty Name="Muon" Relationship="masterModel.FK__Muon__MaCuon__10AB74EC" FromRole="CuonSach" ToRole="Muon" />
+  </EntityType>
+  <EntityType Name="DAUSACH">
+    <Key>
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaSach" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="Tua" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="MaNXB" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="CuonSaches" Relationship="masterModel.FK__CuonSach__MaSach__0BE6BFCF" FromRole="DAUSACH" ToRole="CuonSach" />
+    <NavigationProperty Name="NXB" Relationship="masterModel.FK__DAUSACH__MaNXB__147C05D0" FromRole="DAUSACH" ToRole="NXB" />
+  </EntityType>
+  <EntityType Name="DocGia">
+    <Key>
+      <PropertyRef Name="MaDG" />
+    </Key>
+    <Property Name="MaDG" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="TenDG" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="SoDT" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Muons" Relationship="masterModel.FK__Muon__MaDG__119F9925" FromRole="DocGia" ToRole="Muon" />
+  </EntityType>
+  <EntityType Name="Muon">
+    <Key>
+      <PropertyRef Name="MaCuon" />
+    </Key>
+    <Property Name="MaCuon" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MaDG" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="NgayMuon" Type="DateTime" Precision="0" />
+    <Property Name="NgayTra" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="CuonSach" Relationship="masterModel.FK__Muon__MaCuon__10AB74EC" FromRole="Muon" ToRole="CuonSach" />
+    <NavigationProperty Name="DocGia" Relationship="masterModel.FK__Muon__MaDG__119F9925" FromRole="Muon" ToRole="DocGia" />
+  </EntityType>
+  <EntityType Name="NXB">
+    <Key>
+      <PropertyRef Name="MaNXB" />
+    </Key>
+    <Property Name="MaNXB" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="TenNXB" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="SoDT" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="DAUSACHes" Relationship="masterModel.FK__DAUSACH__MaNXB__147C05D0" FromRole="NXB" ToRole="DAUSACH" />
+  </EntityType>
+  <EntityType Name="spt_fallback_dev">
+    <Key>
+      <PropertyRef Name="xserver_name" />
+      <PropertyRef Name="xdttm_ins" />
+      <PropertyRef Name="xdttm_last_ins_upd" />
+      <PropertyRef Name="low" />
+      <PropertyRef Name="high" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="phyname" />
+    </Key>
+    <Property Name="xserver_name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="xdttm_ins" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="xdttm_last_ins_upd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="xfallback_low" Type="Int32" />
+    <Property Name="xfallback_drive" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="low" Type="Int32" Nullable="false" />
+    <Property Name="high" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int16" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="phyname" Type="String" Nullable="false" MaxLength="127" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="spt_monitor">
+    <Key>
+      <PropertyRef Name="lastrun" />
+      <PropertyRef Name="cpu_busy" />
+      <PropertyRef Name="io_busy" />
+      <PropertyRef Name="idle" />
+      <PropertyRef Name="pack_received" />
+      <PropertyRef Name="pack_sent" />
+      <PropertyRef Name="connections" />
+      <PropertyRef Name="pack_errors" />
+      <PropertyRef Name="total_read" />
+      <PropertyRef Name="total_write" />
+      <PropertyRef Name="total_errors" />
+    </Key>
+    <Property Name="lastrun" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cpu_busy" Type="Int32" Nullable="false" />
+    <Property Name="io_busy" Type="Int32" Nullable="false" />
+    <Property Name="idle" Type="Int32" Nullable="false" />
+    <Property Name="pack_received" Type="Int32" Nullable="false" />
+    <Property Name="pack_sent" Type="Int32" Nullable="false" />
+    <Property Name="connections" Type="Int32" Nullable="false" />
+    <Property Name="pack_errors" Type="Int32" Nullable="false" />
+    <Property Name="total_read" Type="Int32" Nullable="false" />
+    <Property Name="total_write" Type="Int32" Nullable="false" />
+    <Property Name="total_errors" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__CuonSach__MaSach__0BE6BFCF">
+    <End Type="masterModel.DAUSACH" Role="DAUSACH" Multiplicity="0..1" />
+    <End Type="masterModel.CuonSach" Role="CuonSach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DAUSACH">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="CuonSach">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Muon__MaCuon__10AB74EC">
+    <End Type="masterModel.CuonSach" Role="CuonSach" Multiplicity="1" />
+    <End Type="masterModel.Muon" Role="Muon" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CuonSach">
+        <PropertyRef Name="MaCuon" />
+      </Principal>
+      <Dependent Role="Muon">
+        <PropertyRef Name="MaCuon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DAUSACH__MaNXB__147C05D0">
+    <End Type="masterModel.NXB" Role="NXB" Multiplicity="0..1" />
+    <End Type="masterModel.DAUSACH" Role="DAUSACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NXB">
+        <PropertyRef Name="MaNXB" />
+      </Principal>
+      <Dependent Role="DAUSACH">
+        <PropertyRef Name="MaNXB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Muon__MaDG__119F9925">
+    <End Type="masterModel.DocGia" Role="DocGia" Multiplicity="0..1" />
+    <End Type="masterModel.Muon" Role="Muon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocGia">
+        <PropertyRef Name="MaDG" />
+      </Principal>
+      <Dependent Role="Muon">
+        <PropertyRef Name="MaDG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

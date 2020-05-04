@@ -1,5 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="masterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CuonSach">
+    <Key>
+      <PropertyRef Name="MaCuon" />
+    </Key>
+    <Property Name="MaSach" Type="char" MaxLength="5" />
+    <Property Name="MaCuon" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="ViTri" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DAUSACH">
+    <Key>
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaSach" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="Tua" Type="char" MaxLength="40" />
+    <Property Name="MaNXB" Type="char" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="DocGia">
+    <Key>
+      <PropertyRef Name="MaDG" />
+    </Key>
+    <Property Name="MaDG" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenDG" Type="char" MaxLength="30" />
+    <Property Name="DiaChi" Type="char" MaxLength="30" />
+    <Property Name="SoDT" Type="char" MaxLength="11" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.MSreplication_options' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Muon">
+    <Key>
+      <PropertyRef Name="MaCuon" />
+    </Key>
+    <Property Name="MaCuon" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="MaDG" Type="char" MaxLength="5" />
+    <Property Name="NgayMuon" Type="date" />
+    <Property Name="NgayTra" Type="date" />
+  </EntityType>
+  <EntityType Name="NXB">
+    <Key>
+      <PropertyRef Name="MaNXB" />
+    </Key>
+    <Property Name="MaNXB" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TenNXB" Type="char" MaxLength="20" />
+    <Property Name="DiaChi" Type="char" MaxLength="20" />
+    <Property Name="SoDT" Type="char" MaxLength="11" />
+  </EntityType>
   <EntityType Name="Player">
     <Key>
       <PropertyRef Name="P_Username" />
@@ -7,8 +52,194 @@
     <Property Name="P_Username" Type="char" MaxLength="20" Nullable="false" />
     <Property Name="P_Password" Type="char" MaxLength="20" />
     <Property Name="P_Score" Type="int" />
+    <Property Name="P_State" Type="bit" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_db' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="spt_fallback_db">
+    <Key>
+      <PropertyRef Name="xserver_name" />
+      <PropertyRef Name="xdttm_ins" />
+      <PropertyRef Name="xdttm_last_ins_upd" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="dbid" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="version" />
+    </Key>
+    <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+    <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+    <Property Name="xfallback_dbid" Type="smallint" />
+    <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="dbid" Type="smallint" Nullable="false" />
+    <Property Name="status" Type="smallint" Nullable="false" />
+    <Property Name="version" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_dev' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="spt_fallback_dev">
+    <Key>
+      <PropertyRef Name="xserver_name" />
+      <PropertyRef Name="xdttm_ins" />
+      <PropertyRef Name="xdttm_last_ins_upd" />
+      <PropertyRef Name="low" />
+      <PropertyRef Name="high" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="phyname" />
+    </Key>
+    <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+    <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+    <Property Name="xfallback_low" Type="int" />
+    <Property Name="xfallback_drive" Type="char" MaxLength="2" />
+    <Property Name="low" Type="int" Nullable="false" />
+    <Property Name="high" Type="int" Nullable="false" />
+    <Property Name="status" Type="smallint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="phyname" Type="varchar" MaxLength="127" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_usg' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_monitor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="spt_monitor">
+    <Key>
+      <PropertyRef Name="lastrun" />
+      <PropertyRef Name="cpu_busy" />
+      <PropertyRef Name="io_busy" />
+      <PropertyRef Name="idle" />
+      <PropertyRef Name="pack_received" />
+      <PropertyRef Name="pack_sent" />
+      <PropertyRef Name="connections" />
+      <PropertyRef Name="pack_errors" />
+      <PropertyRef Name="total_read" />
+      <PropertyRef Name="total_write" />
+      <PropertyRef Name="total_errors" />
+    </Key>
+    <Property Name="lastrun" Type="datetime" Nullable="false" />
+    <Property Name="cpu_busy" Type="int" Nullable="false" />
+    <Property Name="io_busy" Type="int" Nullable="false" />
+    <Property Name="idle" Type="int" Nullable="false" />
+    <Property Name="pack_received" Type="int" Nullable="false" />
+    <Property Name="pack_sent" Type="int" Nullable="false" />
+    <Property Name="connections" Type="int" Nullable="false" />
+    <Property Name="pack_errors" Type="int" Nullable="false" />
+    <Property Name="total_read" Type="int" Nullable="false" />
+    <Property Name="total_write" Type="int" Nullable="false" />
+    <Property Name="total_errors" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__CuonSach__MaSach__0BE6BFCF">
+    <End Role="DAUSACH" Type="Self.DAUSACH" Multiplicity="0..1" />
+    <End Role="CuonSach" Type="Self.CuonSach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DAUSACH">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="CuonSach">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DAUSACH__MaNXB__147C05D0">
+    <End Role="NXB" Type="Self.NXB" Multiplicity="0..1" />
+    <End Role="DAUSACH" Type="Self.DAUSACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NXB">
+        <PropertyRef Name="MaNXB" />
+      </Principal>
+      <Dependent Role="DAUSACH">
+        <PropertyRef Name="MaNXB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Muon__MaCuon__10AB74EC">
+    <End Role="CuonSach" Type="Self.CuonSach" Multiplicity="1" />
+    <End Role="Muon" Type="Self.Muon" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CuonSach">
+        <PropertyRef Name="MaCuon" />
+      </Principal>
+      <Dependent Role="Muon">
+        <PropertyRef Name="MaCuon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Muon__MaDG__119F9925">
+    <End Role="DocGia" Type="Self.DocGia" Multiplicity="0..1" />
+    <End Role="Muon" Type="Self.Muon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocGia">
+        <PropertyRef Name="MaDG" />
+      </Principal>
+      <Dependent Role="Muon">
+        <PropertyRef Name="MaDG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="masterModelStoreContainer">
+    <EntitySet Name="CuonSach" EntityType="Self.CuonSach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DAUSACH" EntityType="Self.DAUSACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocGia" EntityType="Self.DocGia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Muon" EntityType="Self.Muon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NXB" EntityType="Self.NXB" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="spt_fallback_db" EntityType="Self.spt_fallback_db" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [spt_fallback_db].[xserver_name] AS [xserver_name], 
+    [spt_fallback_db].[xdttm_ins] AS [xdttm_ins], 
+    [spt_fallback_db].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+    [spt_fallback_db].[xfallback_dbid] AS [xfallback_dbid], 
+    [spt_fallback_db].[name] AS [name], 
+    [spt_fallback_db].[dbid] AS [dbid], 
+    [spt_fallback_db].[status] AS [status], 
+    [spt_fallback_db].[version] AS [version]
+    FROM [dbo].[spt_fallback_db] AS [spt_fallback_db]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="spt_fallback_dev" EntityType="Self.spt_fallback_dev" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [spt_fallback_dev].[xserver_name] AS [xserver_name], 
+    [spt_fallback_dev].[xdttm_ins] AS [xdttm_ins], 
+    [spt_fallback_dev].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+    [spt_fallback_dev].[xfallback_low] AS [xfallback_low], 
+    [spt_fallback_dev].[xfallback_drive] AS [xfallback_drive], 
+    [spt_fallback_dev].[low] AS [low], 
+    [spt_fallback_dev].[high] AS [high], 
+    [spt_fallback_dev].[status] AS [status], 
+    [spt_fallback_dev].[name] AS [name], 
+    [spt_fallback_dev].[phyname] AS [phyname]
+    FROM [dbo].[spt_fallback_dev] AS [spt_fallback_dev]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="spt_monitor" EntityType="Self.spt_monitor" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [spt_monitor].[lastrun] AS [lastrun], 
+    [spt_monitor].[cpu_busy] AS [cpu_busy], 
+    [spt_monitor].[io_busy] AS [io_busy], 
+    [spt_monitor].[idle] AS [idle], 
+    [spt_monitor].[pack_received] AS [pack_received], 
+    [spt_monitor].[pack_sent] AS [pack_sent], 
+    [spt_monitor].[connections] AS [connections], 
+    [spt_monitor].[pack_errors] AS [pack_errors], 
+    [spt_monitor].[total_read] AS [total_read], 
+    [spt_monitor].[total_write] AS [total_write], 
+    [spt_monitor].[total_errors] AS [total_errors]
+    FROM [dbo].[spt_monitor] AS [spt_monitor]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__CuonSach__MaSach__0BE6BFCF" Association="Self.FK__CuonSach__MaSach__0BE6BFCF">
+      <End Role="DAUSACH" EntitySet="DAUSACH" />
+      <End Role="CuonSach" EntitySet="CuonSach" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DAUSACH__MaNXB__147C05D0" Association="Self.FK__DAUSACH__MaNXB__147C05D0">
+      <End Role="NXB" EntitySet="NXB" />
+      <End Role="DAUSACH" EntitySet="DAUSACH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Muon__MaCuon__10AB74EC" Association="Self.FK__Muon__MaCuon__10AB74EC">
+      <End Role="CuonSach" EntitySet="CuonSach" />
+      <End Role="Muon" EntitySet="Muon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Muon__MaDG__119F9925" Association="Self.FK__Muon__MaDG__119F9925">
+      <End Role="DocGia" EntitySet="DocGia" />
+      <End Role="Muon" EntitySet="Muon" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>
