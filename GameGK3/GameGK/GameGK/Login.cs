@@ -79,35 +79,32 @@ namespace GameGK
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {
-            bool flag_avai_user = false;
+        {            
+            MENU = new Menu();
             try
             {
                 PlayerEntities playerEntity = new PlayerEntities();
                 Player player1 = new Player();
-                var pl =
-                    from p in playerEntity.Players
-                    select p;
-                //Kiem tra username trong database
-                foreach (var p in pl)
+                var pl = (from player in playerEntity.Players
+                          where player.P_Username == this.txtUsername.Text.Trim()
+                          select player).SingleOrDefault();
+                if(pl!=null)
                 {
-                    if (this.txtUsername.Text.Trim() == p.P_Username.Trim())
+                    if (this.txtPassword.Text.Trim() == pl.P_Password.Trim())
                     {
-                        if(this.txtPassword.Text.Trim() == p.P_Password.Trim())
+                        pl.P_State = true;
+                        playerEntity.SaveChanges();
+                        DialogResult a;
+                        a = MessageBox.Show("Login Success! Click Ok to play game", "Success", MessageBoxButtons.OK);
+                        if (a == DialogResult.OK)
                         {
-                            p.P_State = true;
-                            MessageBox.Show("đăng nhập rồi nè");
-                            // đăng nhập rồi nè
-                        }    
-                        else
-                        {
-                            MessageBox.Show("Wrong Password!");
+                            this.Close();
+                            this.Visible = false;
+                            MENU.ptPlayNow_Click(sender, e);
                         }
-                        flag_avai_user = true;
-                        break;
-                    }
-                }
-                if(!flag_avai_user)
+                    }    
+                }    
+                else
                     MessageBox.Show("Username is not defined");
 
             }

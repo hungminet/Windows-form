@@ -100,6 +100,26 @@ namespace GameGK.Class
                 mainWindowControl.btnStartStop.BackgroundImage = Image.FromFile(Application.StartupPath + @"\pause1.png");
                 mainWindowControl.btnStartStop.Enabled = false;
                 mainWindowControl.pnGameOver.Visible = true;
+                PlayerEntities playerEntity = new PlayerEntities();
+                Player player1 = new Player();
+                var pl = (from player in playerEntity.Players
+                          where player.P_State == true
+                          select player).SingleOrDefault();
+                if(pl!=null)
+                {
+                    if (pl.P_Score < (int)gameBoard.GetScore)
+                    {
+                        pl.P_Score = (int)gameBoard.GetScore;
+                        playerEntity.SaveChanges();
+                        MessageBox.Show("Congrat "+pl.P_Username+" .New Record: " + gameBoard.GetScore);
+                    }
+                }    
+
+                //Kiem tra username trong database
+
+                //gameBoard.GetScore.ToString()
+
+
             }
         }
         

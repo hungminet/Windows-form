@@ -46,10 +46,16 @@ namespace GameGK
             this.Close();
         }
 
-        private void ptPlayNow_Click(object sender, EventArgs e)
+        public void ptPlayNow_Click(object sender, EventArgs e)
         {
             MainWindow main = new MainWindow(this);
             main.ShowDialog();
+        }
+
+        private void ptInfo_Click(object sender, EventArgs e)
+        {
+            Score score = new Score();
+            score.ShowDialog();
         }
     }
 }

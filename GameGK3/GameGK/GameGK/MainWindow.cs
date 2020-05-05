@@ -100,6 +100,16 @@ namespace GameGK
 
         private void ptTetris_Click(object sender, EventArgs e)
         {
+            PlayerEntities playerEntity = new PlayerEntities();
+            Player player1 = new Player();
+            var pl = (from player in playerEntity.Players
+                      where player.P_State == true
+                      select player).SingleOrDefault();
+            if(pl!=null)
+            {
+                pl.P_State = false;
+                playerEntity.SaveChanges();
+            }    
             MENU.Show();
             this.Close();
         }

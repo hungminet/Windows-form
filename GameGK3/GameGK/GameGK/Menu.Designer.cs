@@ -87,6 +87,7 @@
             this.ptInfo.Size = new System.Drawing.Size(183, 52);
             this.ptInfo.TabIndex = 1;
             this.ptInfo.TabStop = false;
+            this.ptInfo.Click += new System.EventHandler(this.ptInfo_Click);
             // 
             // Menu
             // 
