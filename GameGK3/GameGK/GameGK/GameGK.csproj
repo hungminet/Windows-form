@@ -59,15 +59,6 @@
     <Compile Include="Class\GameBoard.cs" />
     <Compile Include="Class\Grid.cs" />
     <Compile Include="Class\MainWindowController.cs" />
-    <Compile Include="CuonSach.cs">
-      <DependentUpon>Player.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAUSACH.cs">
-      <DependentUpon>Player.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DocGia.cs">
-      <DependentUpon>Player.tt</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,12 +76,6 @@
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Muon.cs">
-      <DependentUpon>Player.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NXB.cs">
-      <DependentUpon>Player.tt</DependentUpon>
     </Compile>
     <Compile Include="Player.Context.cs">
       <AutoGen>True</AutoGen>

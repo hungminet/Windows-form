@@ -43,6 +43,7 @@ namespace GameGK
         private void Score_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = GetData();
+            dataGridView1.AutoResizeColumns();
         }
     }
 }

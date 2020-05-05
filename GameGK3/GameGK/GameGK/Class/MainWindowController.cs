@@ -111,7 +111,7 @@ namespace GameGK.Class
                     {
                         pl.P_Score = (int)gameBoard.GetScore;
                         playerEntity.SaveChanges();
-                        MessageBox.Show("Congrat "+pl.P_Username+" .New Record: " + gameBoard.GetScore);
+                        MessageBox.Show("Congrat "+pl.P_Username+".New Record: " + gameBoard.GetScore);
                     }
                 }    
 
