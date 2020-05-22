@@ -1,0 +1,118 @@
+S:\Game\GameGK\GameGK\bin\Debug\GameGK.exe.config
+S:\Game\GameGK\GameGK\bin\Debug\GameGK.exe
+S:\Game\GameGK\GameGK\bin\Debug\GameGK.pdb
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.csprojAssemblyReference.cache
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.Properties.Resources.resources
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.csproj.GenerateResource.cache
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.exe
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.pdb
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.MainWindow.resources
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.Login.resources
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.Menu.resources
+S:\Game\GameGK\GameGK\obj\Debug\GameGK.Score.resources
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\bin\Debug\GameGK.exe.config
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\bin\Debug\GameGK.exe
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\bin\Debug\GameGK.pdb
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.csprojAssemblyReference.cache
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.Login.resources
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.MainWindow.resources
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.Menu.resources
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.Properties.Resources.resources
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.Score.resources
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.csproj.GenerateResource.cache
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.csproj.CoreCompileInputs.cache
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.exe
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.pdb
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\bin\Debug\EntityFramework.dll
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\bin\Debug\EntityFramework.SqlServer.dll
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\bin\Debug\EntityFramework.xml
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\bin\Debug\EntityFramework.SqlServer.xml
+D:\Git\Windows-form\GameGK3\GameGK\GameGK\obj\Debug\GameGK.csproj.CopyComplete
+C:\Users\Thi3n\Downloads\GameGK\GameGK\bin\Debug\GameGK.exe.config
+C:\Users\Thi3n\Downloads\GameGK\GameGK\bin\Debug\GameGK.exe
+C:\Users\Thi3n\Downloads\GameGK\GameGK\bin\Debug\GameGK.pdb
+C:\Users\Thi3n\Downloads\GameGK\GameGK\bin\Debug\EntityFramework.dll
+C:\Users\Thi3n\Downloads\GameGK\GameGK\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Thi3n\Downloads\GameGK\GameGK\bin\Debug\EntityFramework.xml
+C:\Users\Thi3n\Downloads\GameGK\GameGK\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Thi3n\Downloads\GameGK\GameGK\obj\Debug\GameGK.csprojAssemblyReference.cache
+C:\Users\Thi3n\Downloads\GameGK\GameGK\obj\Debug\GameGK.Login.resources
+C:\Users\Thi3n\Downloads\GameGK\GameGK\obj\Debug\GameGK.MainWindow.resources
+C:\Users\Thi3n\Downloads\GameGK\GameGK\obj\Debug\GameGK.Menu.resources
+C:\Users\Thi3n\Downloads\GameGK\GameGK\obj\Debug\GameGK.Properties.Resources.resources
+C:\Users\Thi3n\Downloads\GameGK\GameGK\obj\Debug\GameGK.Score.resources
+C:\Users\Thi3n\Downloads\GameGK\GameGK\obj\Debug\GameGK.csproj.GenerateResource.cache
+C:\Users\Thi3n\Downloads\GameGK\GameGK\obj\Debug\GameGK.csproj.CopyComplete
+C:\Users\Thi3n\Downloads\GameGK\GameGK\obj\Debug\GameGK.exe
+C:\Users\Thi3n\Downloads\GameGK\GameGK\obj\Debug\GameGK.pdb
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\bin\Debug\GameGK.exe.config
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\bin\Debug\GameGK.exe
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\bin\Debug\GameGK.pdb
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.csprojAssemblyReference.cache
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.Login.resources
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.MainWindow.resources
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.Menu.resources
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.Properties.Resources.resources
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.Score.resources
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.csproj.GenerateResource.cache
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.csproj.CopyComplete
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.exe
+C:\Users\DELL\Downloads\Compressed\GameGK\GameGK\GameGK\obj\Debug\GameGK.pdb
+S:\GameGK135\GameGK\obj\Debug\GameGK.csprojAssemblyReference.cache
+S:\GameGK135\GameGK\obj\Debug\GameGK.Login.resources
+S:\GameGK135\GameGK\obj\Debug\GameGK.MainWindow.resources
+S:\GameGK135\GameGK\obj\Debug\GameGK.Menu.resources
+S:\GameGK135\GameGK\obj\Debug\GameGK.Properties.Resources.resources
+S:\GameGK135\GameGK\obj\Debug\GameGK.Score.resources
+S:\GameGK135\GameGK\obj\Debug\GameGK.csproj.GenerateResource.cache
+S:\GameGK135\GameGK\obj\Debug\GameGK.exe
+S:\GameGK135\GameGK\obj\Debug\GameGK.pdb
+S:\GameGK135\GameGK\bin\Debug\GameGK.exe.config
+S:\GameGK135\GameGK\bin\Debug\GameGK.exe
+S:\GameGK135\GameGK\bin\Debug\GameGK.pdb
+S:\GameGK135\GameGK\bin\Debug\EntityFramework.dll
+S:\GameGK135\GameGK\bin\Debug\EntityFramework.SqlServer.dll
+S:\GameGK135\GameGK\bin\Debug\EntityFramework.xml
+S:\GameGK135\GameGK\bin\Debug\EntityFramework.SqlServer.xml
+S:\GameGK135\GameGK\obj\Debug\GameGK.csproj.CopyComplete
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\bin\Debug\GameGK.exe.config
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\bin\Debug\GameGK.exe
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\bin\Debug\GameGK.pdb
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.csprojAssemblyReference.cache
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.Login.resources
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.MainWindow.resources
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.Menu.resources
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.Properties.Resources.resources
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.Score.resources
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.csproj.GenerateResource.cache
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.csproj.CopyComplete
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.exe
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\nhóm\GameGK135\GameGK135\GameGK\obj\Debug\GameGK.pdb
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\bin\Debug\GameGK.exe.config
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\bin\Debug\GameGK.exe
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\bin\Debug\GameGK.pdb
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.csprojAssemblyReference.cache
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.Login.resources
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.MainWindow.resources
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.Menu.resources
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.Properties.Resources.resources
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.Score.resources
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.csproj.GenerateResource.cache
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.csproj.CopyComplete
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.exe
+C:\Users\DELL\Downloads\Documents\Nam 2\HK2\Win\Midterm\Team\Source Code\GameGK135\GameGK\obj\Debug\GameGK.pdb
