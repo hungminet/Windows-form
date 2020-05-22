@@ -43,7 +43,14 @@ namespace GameGK
 
         private void ptCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult di;
+            di = MessageBox.Show("Exit?", "Confirm", MessageBoxButtons.YesNo);
+            if (di == DialogResult.Yes)
+                Application.Exit();
+            else
+            { }    
+
+
         }
 
         public void ptPlayNow_Click(object sender, EventArgs e)

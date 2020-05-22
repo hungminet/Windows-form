@@ -26,6 +26,8 @@ namespace GameGK
         }
     
         public virtual DbSet<Player> Players { get; set; }
+
+
         public virtual DbSet<spt_fallback_dev> spt_fallback_dev { get; set; }
         public virtual DbSet<spt_monitor> spt_monitor { get; set; }
     }

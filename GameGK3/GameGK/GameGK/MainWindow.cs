@@ -28,7 +28,25 @@ namespace GameGK
         }
         public MainWindow(Menu menu)
         {
+
             InitializeComponent();
+// this.lb_name_acc.BackColor = Color.Transparent;
+            PlayerEntities playerEntity = new PlayerEntities();
+            Player player1 = new Player();
+            var pl = (from player in playerEntity.Players
+                      where player.P_State == true
+                      select player).SingleOrDefault();
+            if (pl != null)
+            {
+                this.pn_info_player.Visible = true;
+                this.lb_name_acc.Text = pl.P_Username.Trim();
+                this.lb_name_score.Text = pl.P_Score.ToString();
+            }    
+            else
+            {
+                this.pn_info_player.Visible = false;
+            }    
+
             MENU = menu;
             MENU.Hide();
             this.Size = this.MaximumSize;
@@ -112,6 +130,16 @@ namespace GameGK
             }    
             MENU.Show();
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lb_name_acc_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public class MyPanel:Panel
